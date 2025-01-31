@@ -18,11 +18,22 @@ body {
     overflow: hidden;
 }
 
+/* Evitar scroll y desbordamiento */
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Deshabilitar scroll */
+}
+
 /* Contenedor principal */
 .container {
     position: relative;
-    text-align: center;
-    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Evitar desbordamiento */
 }
 
 /* Estilos del mensaje */
