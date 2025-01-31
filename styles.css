@@ -13,6 +13,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden; /* Evita el scroll */
     height: 100vh;
     overflow: hidden;
 }
@@ -140,7 +141,19 @@ button {
 .heart3 {
     top: 50%;
     left: 80%;
-    animation-delay: 4s;
+    animation-delay: 1s;
+}
+
+.heart4 {
+    top: 80%;
+    left: 10%;
+    animation-delay: 2s;
+}
+
+.heart5 {
+    top: -30%;
+    left: 60%;
+    animation-delay: 2s;
 }
 
 /* Animación de flotación */
@@ -175,4 +188,56 @@ button {
         transform: scale(1.2);
         opacity: 1;
     }
+}
+
+/* Estilos del modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Asegurarse de que esté por encima de todo */
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #ff6f61, #ff3b77);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 90%;
+}
+
+.modal-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content p {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.modal-content button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+    background-color: #45a049;
 }
