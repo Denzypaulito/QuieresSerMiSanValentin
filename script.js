@@ -4,15 +4,6 @@ const btnNo = document.getElementById('btnNo');
 const customAlert = document.getElementById('customAlert');
 const closeModal = document.getElementById('closeModal');
 
-// Función para mostrar el modal personalizado
-btnYes.addEventListener('click', () => {
-    customAlert.style.display = 'flex'; // Mostrar el modal
-});
-
-// Función para cerrar el modal
-closeModal.addEventListener('click', () => {
-    customAlert.style.display = 'none'; // Ocultar el modal
-});
 
 // Función para crear botones pequeños (animación del botón "No")
 function createMiniButtons() {
@@ -42,8 +33,17 @@ function createMiniButtons() {
     }
 }
 
+// Función para el botón "Sí"
+btnYes.addEventListener('click', () => {
+    alert(`¡Apoco shi aceptaste! 💖
+¡Feliz San Valentín, amor de mi alma! 💕
+Te amo Corazón de Melocotón✨🖤`);
+});
 // Función para el botón "No"
 btnNo.addEventListener('click', () => {
     btnNo.style.display = 'none'; // Ocultar el botón "No" original
     createMiniButtons(); // Crear botones pequeños
+
+
+
 });
