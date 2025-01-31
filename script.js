@@ -34,10 +34,8 @@ function createMiniButtons() {
 
         // Mover los botones pequeños aleatoriamente
         miniButton.addEventListener('mouseover', () => {
-            const newX = Math.random() * maxX;
-            const newY = Math.random() * maxY;
-            miniButton.style.left = `${newX}px`;
-            miniButton.style.top = `${newY}px`;
+            miniButton.style.left = `${Math.random() * window.innerWidth}px`;
+            miniButton.style.top = `${Math.random() * window.innerHeight}px`;
         });
     }
 }
