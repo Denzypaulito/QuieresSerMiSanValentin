@@ -2,9 +2,12 @@
 const btnYes = document.getElementById('btnYes');
 const btnNo = document.getElementById('btnNo');
 const customAlert = document.getElementById('customAlert');
-const closeModal = document.getElementById('closeModal');
+// Obtener elementos del modal
+const modal = document.getElementById('customModal');
+const closeModal = document.querySelector('.close-modal');
 
-
+// Asegurar que el modal esté oculto al cargar la página
+modal.style.display = 'none';
 // Función para crear botones pequeños (animación del botón "No")
 function createMiniButtons() {
     const numButtons = 5; // Número de botones pequeños
@@ -33,12 +36,25 @@ function createMiniButtons() {
     }
 }
 
-// Función para el botón "Sí"
+
+
+// Función para mostrar el modal al hacer clic en "Sí"
 btnYes.addEventListener('click', () => {
-    alert(`¡Apoco shi aceptaste! 💖
-¡Feliz San Valentín, amor de mi alma! 💕
-Te amo Corazón de Melocotón✨🖤`);
+    modal.style.display = 'flex';
 });
+
+// Función para cerrar el modal al hacer clic en la "X"
+closeModal.addEventListener('click', () => {
+    modal.style.display = 'none';
+});
+
+// Cerrar el modal si se hace clic fuera del contenido
+window.addEventListener('click', (event) => {
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+});
+
 // Función para el botón "No"
 btnNo.addEventListener('click', () => {
     btnNo.style.display = 'none'; // Ocultar el botón "No" original
