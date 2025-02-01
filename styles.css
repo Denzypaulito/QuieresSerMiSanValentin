@@ -36,12 +36,22 @@ body, html {
     overflow: hidden; /* Evitar desbordamiento */
 }
 
+/* Centrar el mensaje */
+.message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Asegura que el texto esté centrado */
+}
+
 /* Estilos del mensaje */
 .message h1 {
     font-size: 4rem;
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
+
 
 .message p {
     font-size: 2rem;
